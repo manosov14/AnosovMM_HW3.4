@@ -9,26 +9,33 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var currentValue = 50.0
     @State private var targetValue = Int.random(in: 0...100)
+    @State private var currentValue = 50.0
     @State private var showAlert = false
-    @State private var currentScore = 0
     
     var body: some View {
         
-        ButtonView(
-            showAlert: $showAlert,
-            title: "Проверь меня",
-            currentScore: computeScore(),
-            action: { showAlert = true }
-        )
-        
-        ButtonView(
-            showAlert: $showAlert,
-            title: "",
-            currentScore: computeScore(),
-            action: <#() -> Void#>
+        VStack {
+            ButtonView(
+                showAlert: $showAlert,
+                title: "Проверь меня",
+                currentScore: computeScore(),
+                action: { showAlert = true }
             )
+            .padding()
+            
+            GameSlider(
+                currentValue: $currentValue,
+                targetValue: targetValue,
+                color: .red,
+                alpha: computeScore()
+            )
+            
+            ButtonView(title: "Начать заново") {
+                targetValue = Int.random(in: 1...100)
+            }
+            .padding()
+        }
     }
     
     
@@ -36,13 +43,11 @@ struct ContentView: View {
         let difference = abs(targetValue - lround(currentValue))
         return 100 - difference
     }
-    
-    
 }
 
 struct ButtonView: View {
-    
     @Binding var showAlert: Bool
+    
     let title: String
     let currentScore: Int
     let action: () -> Void
@@ -54,11 +59,12 @@ struct ButtonView: View {
                     title: Text("Твои очки"),
                     message: Text("\(currentScore)")
                 )
+                
             }
             .padding()
     }
     
-    init(showAlert: Binding<Bool> = .constant(false), title: String, currentScore: Int, action: @escaping () -> Void) {
+    init(showAlert: Binding<Bool> = .constant(false), title: String, currentScore: Int = 0, action: @escaping () -> Void) {
         self._showAlert = showAlert
         self.title = title
         self.currentScore = currentScore

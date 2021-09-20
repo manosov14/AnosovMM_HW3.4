@@ -13,6 +13,8 @@
 		8733B3E426F7FC0500EFEFA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8733B3E326F7FC0500EFEFA1 /* Assets.xcassets */; };
 		8733B3E726F7FC0500EFEFA1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8733B3E626F7FC0500EFEFA1 /* Preview Assets.xcassets */; };
 		8733B3EA26F7FC0500EFEFA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8733B3E826F7FC0500EFEFA1 /* LaunchScreen.storyboard */; };
+		8733B3F226F874A200EFEFA1 /* GameSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8733B3F126F874A200EFEFA1 /* GameSlider.swift */; };
+		87F275A826F8EE6F00F50ECB /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F275A726F8EE6F00F50ECB /* CustomSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		8733B3E626F7FC0500EFEFA1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8733B3E926F7FC0500EFEFA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8733B3EB26F7FC0500EFEFA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8733B3F126F874A200EFEFA1 /* GameSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSlider.swift; sourceTree = "<group>"; };
+		87F275A726F8EE6F00F50ECB /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				8733B3DD26F7FC0300EFEFA1 /* AppDelegate.swift */,
 				8733B3DF26F7FC0300EFEFA1 /* SceneDelegate.swift */,
 				8733B3E126F7FC0300EFEFA1 /* ContentView.swift */,
+				8733B3F126F874A200EFEFA1 /* GameSlider.swift */,
+				87F275A726F8EE6F00F50ECB /* CustomSlider.swift */,
 				8733B3E326F7FC0500EFEFA1 /* Assets.xcassets */,
 				8733B3E826F7FC0500EFEFA1 /* LaunchScreen.storyboard */,
 				8733B3EB26F7FC0500EFEFA1 /* Info.plist */,
@@ -145,6 +151,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8733B3F226F874A200EFEFA1 /* GameSlider.swift in Sources */,
+				87F275A826F8EE6F00F50ECB /* CustomSlider.swift in Sources */,
 				8733B3DE26F7FC0300EFEFA1 /* AppDelegate.swift in Sources */,
 				8733B3E026F7FC0300EFEFA1 /* SceneDelegate.swift in Sources */,
 				8733B3E226F7FC0300EFEFA1 /* ContentView.swift in Sources */,
